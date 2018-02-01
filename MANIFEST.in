@@ -1,0 +1,9 @@
+include nucleus/boilerplate/.env.example
+include nucleus/boilerplate/alembic.ini
+include nucleus/boilerplate/migrations/script.py.mako
+include README.rst
+include MANIFEST.in
+include setup.py
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

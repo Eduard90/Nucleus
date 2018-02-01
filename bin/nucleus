@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+
+import os
+import click
+
+
+@click.command(help='Create simple application from boilerplate')
+def create_app():
+    import shutil
+    from nucleus import nucleus_package_path
+
+    boilerplate_path = os.path.join(nucleus_package_path, 'boilerplate')
+    res = shutil.copytree(boilerplate_path, './project/')
+    os.chmod('./project/manage.py', 0o0755)
+    click.echo(click.style("Project boilerplate successfully created"))
+
+
+@click.group()
+def cli():
+    pass
+
+
+cli.add_command(create_app)
+
+if __name__ == '__main__':
+    cli()
