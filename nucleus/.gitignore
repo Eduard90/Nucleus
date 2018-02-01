@@ -8,7 +8,5 @@ __pycache__/
 /static/
 /media/
 /default.backup
-/volumes/
 /*.log
-*.sqlite3
 /.env
