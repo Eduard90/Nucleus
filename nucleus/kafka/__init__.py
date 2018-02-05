@@ -15,4 +15,4 @@ class ConsumerMessage:
         return self.__message
 
     def __repr__(self):
-        return "<ConsumerMessage app='{}' consumer_record='{}'>".format(self.app, self.message)
+        return "<ConsumerMessage app='{}' message='{}'>".format(self.app, self.message)
